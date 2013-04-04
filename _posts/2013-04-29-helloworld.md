@@ -1,6 +1,8 @@
 ---
+layout : post
 title : Hello World!
-categories : [beginneer]
+categories : [hello]
+tags : [hello, about]
 ---
 
 ## Hello
