@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "About"
-description: ""
+title: About
+group: navigation
+description: "关于这个博客"
 ---
 {% include JB/setup %}
 

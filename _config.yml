@@ -1,6 +1,6 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME"]
 auto: true
@@ -10,8 +10,8 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 敏杰的书桌
-tagline: Site Tagline
-author: 
+tagline : Site Tagline
+author : 
   name : Name Lastname
   email : sbabybird@gmail.com
   github : sbabybird
