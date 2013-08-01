@@ -1,6 +1,6 @@
 ---
 layout : post
-title : helloooooooo
+title : 中文测试
 categories : hello
 tags : hello test clean
 ---
