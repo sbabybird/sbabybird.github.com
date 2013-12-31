@@ -10,9 +10,9 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 敏杰的书桌
-tagline : Site Tagline
+tagline : 敏而好学，杰而不傲
 author : 
-  name : Name Lastname
+  name : Minjie Sun
   email : sbabybird@gmail.com
   github : sbabybird
   twitter : sbabybird
@@ -101,7 +101,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-46786915-1'
     getclicky :
       site_id : 
     mixpanel :
