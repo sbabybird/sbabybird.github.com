@@ -8,7 +8,7 @@ tags : [lisp, programming, exercise]
 #### 练习1.2    请将下面表达式变换为前缀形式：
 
 
-$$ \frac{5+4+\Bigl(2-\Bigl(3-\left(6+4/5\right)\Bigr)\Bigr)}{3\left(6-2\right)\left(2-7\right)} $$
+$$ \frac{5+4+\Bigl(2-\Bigl(3-\left(6+\frac{4}{5}\right)\Bigr)\Bigr)}{3\left(6-2\right)\left(2-7\right)} $$
 
     (/ (+ 5
           4
