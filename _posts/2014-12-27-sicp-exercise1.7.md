@@ -11,6 +11,7 @@ tags : [lisp, programming, exercise]
 
 因此，要解决这一问题，可以按照题目中给出的思路对good-enough?过程进行修改，不再判断猜测值平方与X的差距，而是判断两次猜测值之间的比率。
 
+{% highlight scheme %}
     1 ]=> (define (good-enough? guess next)
                   (< (/ (abs (- guess next)) 
                         guess) 
@@ -32,5 +33,6 @@ tags : [lisp, programming, exercise]
     1 ]=> (sqrt 100000000000000000000000000000000000000000000)
 
     ;Value: 1.0000000000001497e22
+{% endhighlight %}
     
 在新的`good-enough?`中，传入的是两次猜测值，所以还要修改`sqrt-iter`过程，在调用时计算两次猜测值。
