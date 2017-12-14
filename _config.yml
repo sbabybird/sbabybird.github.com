@@ -3,8 +3,8 @@ markdown:         Kramdown
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
-relative_permalinks: true
+#permalink:        pretty
+#relative_permalinks: true
 
 # Setup
 title:            从容地狂奔
