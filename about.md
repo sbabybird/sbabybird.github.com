@@ -1,9 +1,15 @@
 ---
 layout: page
-title: About
-group: navigation
-description: "关于敏杰的书桌"
+titles:
+  en: About
+  zh: 关于
+  zh-Hans: 关于
+  zh-Hant: 關於
+key: page-about
 ---
 
-## 关于敏杰的书桌
-这里是我写字的地方，用于记录一些心得体会，或者思考的过程。从网上获取信息容易，但消化吸收不易，如果能够提炼并形成自己独特的见解则更是难得。勤于思考着，需要经常将学到的东西整理并记录下来，形成结构化的知识体系。
+Just say something about yourself. :+1:
+
+{% highlight javascript %}
+  (() => console.log('hello, world!'))();
+{% endhighlight %}
