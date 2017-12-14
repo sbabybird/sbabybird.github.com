@@ -7,10 +7,10 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            CoolCore
-tagline:          '敏而好学，杰而不傲'
-description:      '<a href=/#>Hi this is my blog</><br/> <a href=https://twitter.com/sbabybird>twitter</a><br /><a href=https://github.com/sbabybird>github</a>'
-url:              http://www.sunminjie.com
+title:            从容地狂奔
+tagline:          ''
+description:      '<a href=/#>Hi this is my blog</><br/> <a href=https://twitter.com/sbabybird>twitter</a><br /><a href=https://github.com/sbabybird>github</a><br/>敏而好学，杰而不傲</br>'
+url:              http://sbabybird.github.io
 baseurl:          /
 
 author:
