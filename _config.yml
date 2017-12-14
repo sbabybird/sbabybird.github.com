@@ -1,7 +1,7 @@
 # Site
 title: 从容地狂奔
 subtitle:
-description:
+description: 人生的路上需要狂奔，但，更需要从容
 author: 从容地狂奔
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
@@ -220,13 +220,13 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
+  GitHub: sbabybird
+  Twitter: sbabybird
   Weibo: weibo
 
 
 # Sidebar Avatar
-# in directory: /assets/images/avatar.gif
+# in directory: /assets/images/avatar.jpg
 #avatar:
 
 
@@ -374,8 +374,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: sbabybird
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
