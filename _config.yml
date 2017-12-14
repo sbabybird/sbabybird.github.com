@@ -42,19 +42,19 @@ timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_t
 
 ## Author & social ##
 author:
-  name: Someone
-  # email:  #your Email address e.g. someone@site.com
+  name: 从容地狂奔
+  email: sbabybird@gmail.com
   # facebook:  #your Facebook username
-  # twitter:  #your Twitter username
-  # github:  #your GitHub username
+  twitter: sbabybird
+  github: sbabybird
   # googleplus:  #your Google+ username
-  # weibo:  #your Weibo username
+  # weibo: 
   # douban:  #your Douban username
   # linkedin:  #your Linkedin username
 
 ## Comment system (Disqus) ##
 disqus:
-  # shortname:  #the Disqus shortname for the site
+  shortname:  sbabybird #the Disqus shortname for the site
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
