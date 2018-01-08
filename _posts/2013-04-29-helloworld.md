@@ -1,8 +1,11 @@
 ---
 layout : single
 title : Hello World!
-categories : [hello]
-tags : [hello, about]
+categories : 
+  - hello
+tags : 
+  - hello
+  - about
 ---
 
 ## Hello

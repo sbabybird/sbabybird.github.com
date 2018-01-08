@@ -1,8 +1,12 @@
 ---
 layout : single
 title : SICP 课后练习题1.8
-categories : [SICP]
-tags : [lisp, programming, exercise]
+categories : 
+  - SICP
+tags : 
+  - lisp
+  - programming
+  - exercise
 ---
 
 #### 练习 1.8 求立方根的牛顿法基于如下事实，如果y是x的立方根的一个近似值，那么下式将给出一个更好的近似值：

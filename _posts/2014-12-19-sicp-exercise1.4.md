@@ -1,8 +1,12 @@
 ---
 layout : single
 title : SICP 课后练习题1.4
-categories : [SICP]
-tags : [lisp, programming, exercise]
+categories : 
+  - SICP
+tags : 
+  - lisp
+  - programming
+  - exercise
 ---
 
 #### 练习1.4    请仔细考察上面给出的允许运算符为复合表达式的组合式的求值模型，根据对这一模型的认识描述下面过程的行为。

@@ -1,8 +1,12 @@
 ---
 layout : single
 title : SICP 课后练习题1.2
-categories : [SICP]
-tags : [lisp, programming, exercise]
+categories : 
+  - SICP
+tags : 
+  - lisp
+  - programming
+  - exercise
 ---
 
 #### 练习1.2    请将下面表达式变换为前缀形式：

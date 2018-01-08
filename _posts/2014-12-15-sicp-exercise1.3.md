@@ -1,8 +1,12 @@
 ---
 layout : single
 title : SICP 课后练习题1.3
-categories : [SICP]
-tags : [lisp, programming, exercise]
+categories : 
+  - SICP
+tags : 
+  - lisp
+  - programming
+  - exercise
 ---
 
 #### 练习1.3    请定义一个过程，它以三个数为参数，返回其中较大两个数之和。
