@@ -86,7 +86,7 @@ analytics:
 author:
   name             : "sbabybird"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : "A programmer who loves to learn."
   location         : "Beijing China"
   email            : "sbabybird@gmail.com"
   uri              :
@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "sbabybird"
   gitlab           :
   google_plus      :
   keybase          :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "sbabybird"
   vine             :
   weibo            :
   xing             :
