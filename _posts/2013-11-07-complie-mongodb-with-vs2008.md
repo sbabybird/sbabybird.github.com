@@ -1,5 +1,5 @@
 ---
-layout : post
+layout : single
 title : 使用vs2008编译mongodb
 categories : [develop]
 tags : mongodb vs2008

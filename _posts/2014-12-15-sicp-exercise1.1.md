@@ -1,5 +1,5 @@
 ---
-layout : post
+layout : single
 title : SICP 课后练习题1.1
 categories : [SICP]
 tags : [lisp, programming, exercise]

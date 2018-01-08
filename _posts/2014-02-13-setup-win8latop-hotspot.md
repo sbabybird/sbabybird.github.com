@@ -1,5 +1,5 @@
 ---
-layout : post
+layout : single
 title : win8系统下使用笔记本作为wifi热点
 categories : [misc]
 tags : wifi win8
