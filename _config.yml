@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "sunrise" # "default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "Learing&Writing"
+title                    : "Learning&Writing"
 title_separator          : "-"
 name                     : "sbabybird"
 description              : "My reading and studying notes."
