@@ -9,7 +9,10 @@
   {% endfor %}
 {% else %}
   <script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
+  <script defer src="/assets/js/font-awesome/font-awesome-5.1.0-all.js"></script>
+  <--
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  -->
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
