@@ -17,8 +17,7 @@ $$ \frac{x/y^2+2y}{3} $$
 
 解答：基本思路与求解平方根的实现是一致的，区别再有得到更好值`improve`的过程有变化，只需根据公式描述进行实现即可
 
-### {% highlight scheme %}
-``` scheme
+```scheme
     (define (improve guess x)
         (/
          (+ (/ x (* guess guess)) (* guess 2))
@@ -40,5 +39,3 @@ $$ \frac{x/y^2+2y}{3} $$
     (define (cbrt x)
         (cbrt-iter 1.0 x))
 ```
-    
-### {% endhighlight %}
