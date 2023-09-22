@@ -8,6 +8,7 @@ tags:
   - howto
   - github
 draft: false
+image: 2023-09-21-16-10-50.png
 ---
 
 ## 背景
