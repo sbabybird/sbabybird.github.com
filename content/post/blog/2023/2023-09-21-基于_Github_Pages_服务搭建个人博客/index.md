@@ -12,7 +12,6 @@ image: 2023-09-21-16-10-50.png
 ---
 
 ## 背景
-![](2023-09-21-16-10-50.png)
 搭建独立博客网站的方法多种多样，常见的方法包括租用服务器自行架设，或者选择托管服务商提供的博客发布服务。
 
 但是上述两种方式都会产生一定的费用，对于非盈利网站而言，不太友好。
@@ -120,7 +119,7 @@ Pages 服务原本用于帮助托管在 Github 上的开源项目更便捷地发
 
 ## 操作步骤
 ### 建立 Github 仓库
-1. 进入 [hugo-theme-stack 的 Git 仓库模板](https://github.com/CaiJimmy/hugo-theme-stack-starter)。
+1. 点击这个超链接进入 [hugo-theme-stack-starter 的 Git 仓库模板](https://github.com/CaiJimmy/hugo-theme-stack-starter)。
 2. 点击页面中的“使用此模板”按钮，以创建你自己的仓库（注意：需先登录自己的账号才能创建）。
    ![](2023-09-22-10-45-54.png)
 3. 建立好仓库（注意仓库命名为`你的用户名.github.io`）之后，会自动带有仓库模板的初始文件。
