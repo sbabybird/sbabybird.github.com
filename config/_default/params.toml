@@ -71,7 +71,7 @@ default = "auto"
 enabled = true
 
 [imageProcessing.content]
-enabled = false
+enabled = true
 
 ## Comments
 [comments]
