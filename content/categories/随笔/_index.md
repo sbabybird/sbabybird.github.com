@@ -1,6 +1,6 @@
 ---
-title: 工具使用
-description: 记录高效使用工具的心得。
+title: 随笔
+description: 日常思考。
 image: cover.jpg
 style:
     background: "#ffe4c0"
