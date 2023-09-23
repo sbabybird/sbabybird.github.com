@@ -2,6 +2,7 @@
 title: 机器文摘 第 050 期
 date: 2023-09-19
 description: 机器文摘 第 050 期
+image: 2023-09-19-13-31-40.png
 tags: 
     - 机器文摘
 categories:

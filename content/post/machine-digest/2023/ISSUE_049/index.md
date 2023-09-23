@@ -2,6 +2,7 @@
 title: 机器文摘 第 049 期
 date: 2023-09-12
 description: 机器文摘 第 049 期
+image: 2023-09-12-13-34-22.png
 tags: 
     - 机器文摘
 categories:
