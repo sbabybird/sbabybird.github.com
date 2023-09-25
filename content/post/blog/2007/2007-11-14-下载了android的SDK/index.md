@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 下载了android的SDK
+title: 下载了android的SDK
 date: 2007-11-14
 categories:
   - 博客日记

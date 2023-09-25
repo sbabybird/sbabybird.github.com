@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 伪LOMO
+title: 伪LOMO
 date: 2007-11-13
 categories:
   - 博客日记

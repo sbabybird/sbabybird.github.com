@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 一碗牛肉面
+title: 一碗牛肉面
 date: 2007-11-13
 categories:
   - 博客日记

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 重温Winamp
+title: 重温Winamp
 date: 2007-11-13
 categories:
   - 博客日记

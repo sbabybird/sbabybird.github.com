@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 早上去打了疫苗
+title: 早上去打了疫苗
 date: 2007-11-13
 categories:
   - 博客日记

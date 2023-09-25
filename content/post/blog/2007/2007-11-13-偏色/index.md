@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 偏色
+title: 偏色
 date: 2007-11-13
 categories:
   - 博客日记

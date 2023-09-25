@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 小鸟在脚下飞翔
+title: 小鸟在脚下飞翔
 date: 2007-11-13
 categories:
   - 博客日记

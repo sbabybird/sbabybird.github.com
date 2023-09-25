@@ -1,6 +1,6 @@
 ---
 layout: single
-title: [从容地狂奔] 晚上有雾
+title: 晚上有雾
 date: 2007-11-13
 categories:
   - 博客日记
