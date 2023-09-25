@@ -8,4 +8,6 @@ tags:
   - 心情随笔
 ---
 
-在Winamp的电台上捡到这首歌Lady，马上被kennyrogers的嗓音吸引了。&nbsp;--由sbabybird于11/17/200702&#58;10&#58;00下午在从容地狂奔上发表
+在Winamp的电台上捡到这首歌Lady，马上被kennyrogers的嗓音吸引了。
+
+--由sbabybird于11/17/200702&#58;10&#58;00下午在从容地狂奔上发表
