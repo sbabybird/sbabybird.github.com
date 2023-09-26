@@ -6,6 +6,7 @@ categories:
   - 博客日记
 tags:
   - 心情随笔
+image: 20071114-1.PNG
 ---
 
 到家后立即下载Android的SDK，按照帮助文档的提示，顺利运行伟大的\"HelloWorld！\"

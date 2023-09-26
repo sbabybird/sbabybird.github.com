@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 理发
+title: 理发2007
 date: 2007-07-29
 categories:
   - 博客日记
