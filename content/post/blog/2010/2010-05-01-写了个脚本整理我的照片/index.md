@@ -8,4 +8,71 @@ tags:
   - 心情随笔
 ---
 
-上次整理硬盘的时候把我的照片一股脑儿的放在了一个目录下，这次又有闲功夫了，写了个python脚本来处理我的照片。基本思路是使用PIL库读取照片的exif信息，取出拍摄的日期时间，根据日期建立新的文件夹，然后照片文件以日期时间格式命名。批量处理，比较简单。#!/usr/bin/envpython#-*-coding&#58;gbk-*-\"\"\"&nbsp;复制指定目录的照片到目标目录，并且根据照片的拍摄时间进行重命名比如某张照片拍摄于2008年3月15日12&#58;00&#58;00，则目标目录为2008\\\\03\\\\15\\\\120000.jpg\"\"\"fromPILimportImageimportos,sysdefgetdistpath(str,distdir)&#58;&nbsp;&nbsp;&nbsp;date=str.split(\'\')[0].split(\'&#58;\')&nbsp;&nbsp;&nbsp;dirs=distdir+os.sep+os.sep.join(date)&nbsp;&nbsp;&nbsp;ifnotos.path.exists(dirs)&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(dirs)&nbsp;&nbsp;&nbsp;dirs=dirs+os.sep+\'\'.join(str.split(\'\')[1].split(\'&#58;\'))+\'.jpg\'&nbsp;&nbsp;&nbsp;returndirsdefcopyimage(srcdir,distdir)&#58;&nbsp;&nbsp;&nbsp;forpathin[srcdir+os.sep+iforiinos.listdir(srcdir)]&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ifos.path.isdir(path)&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyimage(path,distdir)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writelog(path)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image=Image.open(path)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logstr=\'fileopenerror&#58;\'+path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writelog(logstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distpath=getdistpath(image._getexif()[306],distdir)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logstr=\'distpath&#58;\'+distpath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writelog(logstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logstr=\'getextiferror&#58;\'+path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writelog(logstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ifnotos.path.exists(distpath)&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image.save(distpath)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logstr=\'filecopyerror&#58;\'+path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writelog(logstr)defwritelog(str)&#58;&nbsp;&nbsp;&nbsp;globallogfile&nbsp;&nbsp;&nbsp;logfile.write(str+\'\\')&nbsp;&nbsp;&nbsp;printstrdefmain()&#58;&nbsp;&nbsp;&nbsp;iflen(sys.argv)==3&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;globallogfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logfile=open(\'cilog.txt\',\'w\')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copyimage(sys.argv[1],sys.argv[2])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logfile.close()&nbsp;&nbsp;&nbsp;else&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print\'需要给出两个参数，第一个是照片目录，第二个是目标目录\'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print\'例如：\',sys.argv[0],\'e&#58;\\\\photof&#58;\\\\goodphoto\'if__name__==\'__main__\'&#58;&nbsp;&nbsp;&nbsp;main()
+上次整理硬盘的时候把我的照片一股脑儿的放在了一个目录下，这次又有闲功夫了，写了个python脚本来处理我的照片。基本思路是使用PIL库读取照片的exif信息，取出拍摄的日期时间，根据日期建立新的文件夹，然后照片文件以日期时间格式命名。批量处理，比较简单。
+
+```python
+#!/usr/bin/env python
+# -*- coding: gbk -*-
+
+"""
+复制指定目录的照片到目标目录，并且根据照片的拍摄时间进行重命名
+比如某张照片拍摄于2008年3月15日12:00:00，则目标目录为2008\\03\\15\\120000.jpg
+"""
+
+from PIL import Image
+import os
+import sys
+
+def get_dist_path(str, dist_dir):
+    date = str.split(' ')[0].split(':')
+    dirs = dist_dir + os.sep + os.sep.join(date)
+    
+    if not os.path.exists(dirs):
+        os.makedirs(dirs)
+    
+    dirs = dirs + os.sep + ''.join(str.split(' ')[1].split(':')) + '.jpg'
+    return dirs
+
+def copy_image(src_dir, dist_dir):
+    for path in [src_dir + os.sep + i for i in os.listdir(src_dir)]:
+        if os.path.isdir(path):
+            copy_image(path, dist_dir)
+        else:
+            write_log(path)
+            try:
+                image = Image.open(path)
+            except:
+                log_str = 'file open error: ' + path
+                write_log(log_str)
+            try:
+                dist_path = get_dist_path(image._getexif()[306], dist_dir)
+                log_str = 'dist path: ' + dist_path
+                write_log(log_str)
+            except:
+                log_str = 'get exif error: ' + path
+                write_log(log_str)
+            try:
+                if not os.path.exists(dist_path):
+                    image.save(dist_path)
+            except:
+                log_str = 'file copy error: ' + path
+                write_log(log_str)
+
+def write_log(str):
+    global log_file
+    log_file.write(str + '\n')
+    print(str)
+
+def main():
+    if len(sys.argv) == 3:
+        global log_file
+        log_file = open('cilog.txt', 'w')
+        copy_image(sys.argv[1], sys.argv[2])
+        log_file.close()
+    else:
+        print('需要给出两个参数，第一个是照片目录，第二个是目标目录')
+        print('例如：', sys.argv[0], 'e:\\photo f:\\goodphoto')
+
+if __name__ == '__main__':
+    main()
+```
