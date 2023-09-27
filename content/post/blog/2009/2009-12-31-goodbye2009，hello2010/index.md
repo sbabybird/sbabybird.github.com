@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 。
+title: goodbye2009，hello2010
 date: 2009-12-31
 categories:
   - 博客日记
