@@ -23,7 +23,7 @@ tags:
 
 今年大概按了四五千次快门吧，能看的入眼的也有个百十来张，我对摄影的定位就是记录日常生活，发现并捕捉生活中的美好瞬间，如果让我挑一张自己比较满意的话，就是下面这张:
 
-![DSCF2721.JPG](https://upload-images.jianshu.io/upload_images/25416-97902ee0d97e0abf.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![DSCF2721.JPG](DSCF2721.JPG)
 
 在地铁上的抓拍，当时感觉这个包比较有趣，于是就拍了。
 
