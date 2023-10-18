@@ -4,11 +4,10 @@ date: 2015-01-05
 title : SICP 课后练习题1.9
 math: true
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 ---
 
 #### 练习 1.9  下面两个过程各定义了一种加起两个正整数的方法，他们都基于过程inc(它将参数增加1)和dec(它将参数减少1) 。请用代换模型展示这两个过程在求值`(add 4 5)`时所产生的计算过程。这些计算过程是递归的或者迭代的吗？

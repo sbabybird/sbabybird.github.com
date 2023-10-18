@@ -3,9 +3,9 @@ layout: single
 title: 排队
 date: 2009-09-28
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 我这辈子最痛恨两件事儿，一个是排队，另一个还是排队。

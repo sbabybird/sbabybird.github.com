@@ -3,9 +3,9 @@ layout: single
 title: 时空错乱
 date: 2010-01-18
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 我的记性不大好，一般都是靠手机的日程表来安排事情。

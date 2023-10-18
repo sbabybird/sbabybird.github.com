@@ -3,9 +3,9 @@ layout: single
 title: 笔筒
 date: 2009-03-15
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20090315.jpg
 ---
 

@@ -3,9 +3,9 @@ layout: single
 title: 我最喜欢的电影画面
 date: 2010-03-10
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 4681282-739763.jpg
 ---
 

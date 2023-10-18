@@ -3,9 +3,9 @@ layout: single
 title: 开幕式那天，使用哪种点火方式？
 date: 2008-07-10
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 据说已有了定论，但还是个秘密，老张还在卖关子。

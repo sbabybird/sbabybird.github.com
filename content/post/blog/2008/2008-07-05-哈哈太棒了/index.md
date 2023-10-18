@@ -3,9 +3,9 @@ layout: single
 title: 哈哈太棒了
 date: 2008-07-05
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 晚饭毕，弹了一会儿电子琴，感觉很投入。

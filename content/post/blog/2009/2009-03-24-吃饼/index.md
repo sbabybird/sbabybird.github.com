@@ -3,9 +3,9 @@ layout: single
 title: 吃饼
 date: 2009-03-24
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 晚饭喝粥吃饼，就在离公司不远的粥铺。

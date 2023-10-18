@@ -3,9 +3,9 @@ layout: single
 title: 接站
 date: 2009-05-29
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 第一次到火车站接人。

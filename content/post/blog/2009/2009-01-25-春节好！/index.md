@@ -3,9 +3,9 @@ layout: single
 title: 春节好！
 date: 2009-01-25
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 牛年大吉！万事顺利！

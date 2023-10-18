@@ -3,9 +3,9 @@ layout: single
 title: 听雪
 date: 2010-01-03
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 早晨醒来，拉开窗帘，看到一个洁白的飘着雪花的世界，哦也。

@@ -3,9 +3,9 @@ layout: single
 title: 永不放弃
 date: 2010-04-03
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 不要被眼前的困难吓倒，认定你的目标，坚持下去。

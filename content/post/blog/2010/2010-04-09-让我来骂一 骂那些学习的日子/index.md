@@ -3,9 +3,9 @@ layout: single
 title: 让我来骂一 骂那些学习的日子
 date: 2010-04-09
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 我是一个热爱学习的人，可是这是从学习编程开始的。

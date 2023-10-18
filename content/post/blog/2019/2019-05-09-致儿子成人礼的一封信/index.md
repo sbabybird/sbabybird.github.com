@@ -3,7 +3,7 @@ layout : single
 date: 2019-05-09
 title : 致儿子成人礼的一封信
 categories : 
-  - 随笔
+  - 心得随笔
 tags : 
   - 家庭
 ---

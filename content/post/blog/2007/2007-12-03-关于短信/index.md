@@ -3,9 +3,9 @@ layout: single
 title: 关于短信
 date: 2007-12-03
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20071203.png
 ---
 

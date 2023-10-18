@@ -3,9 +3,9 @@ layout: single
 title: 理发2007
 date: 2007-07-29
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 对于我来说，理发是件很痛苦的事情，可能是有心理障碍吧。

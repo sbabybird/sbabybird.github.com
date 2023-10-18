@@ -3,9 +3,9 @@ layout: single
 title: 球雨
 date: 2009-05-21
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 早在去年的这个时候，我们就发过牢骚，只要是我们想打篮球的时候，必然要下雨。

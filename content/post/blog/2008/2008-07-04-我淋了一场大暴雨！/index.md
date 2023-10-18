@@ -3,9 +3,9 @@ layout: single
 title: 我淋了一场大暴雨！
 date: 2008-07-04
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 就在下班的时候，天还没有要下雨的样子。

@@ -3,9 +3,9 @@ layout: single
 title: 恐怖的超市
 date: 2009-06-11
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 下班后去超市买东西，面对如此拥挤的人群，我感到大脑一片空白。

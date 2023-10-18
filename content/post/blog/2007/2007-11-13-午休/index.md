@@ -3,9 +3,9 @@ layout: single
 title: 午休
 date: 2007-11-13
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20071109.png
 ---
 

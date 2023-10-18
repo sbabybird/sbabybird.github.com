@@ -3,9 +3,9 @@ layout: single
 title: 每个男孩都应该有一把吉他
 date: 2009-01-05
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20090105.png
 ---
 

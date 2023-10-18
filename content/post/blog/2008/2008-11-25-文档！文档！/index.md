@@ -3,9 +3,9 @@ layout: single
 title: 文档！文档！
 date: 2008-11-25
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20081225.png
 ---
 

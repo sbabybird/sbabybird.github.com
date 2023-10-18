@@ -3,11 +3,10 @@ layout: single
 title: 有音乐就有春天
 date: 2008-07-06
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
-
 
 有音乐就有春天，当我写下这句话，撇了撇嘴，我想，我还挺能装啊。
 

@@ -3,9 +3,9 @@ layout: single
 title: 什么也比不上家的温暖
 date: 2009-01-24
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 好啦，历时十二个小时，经过无数次的转车，终于平安到家了。

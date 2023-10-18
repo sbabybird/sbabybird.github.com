@@ -3,9 +3,9 @@ layout: single
 title: Blender练习
 date: 2008-12-25
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
-无聊，用blender作图一副，练习。
+无聊，用 blender 作图一副，练习。

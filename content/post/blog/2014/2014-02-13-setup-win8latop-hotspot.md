@@ -3,7 +3,7 @@ layout : single
 date: 2014-02-13
 title : win8系统下使用笔记本作为wifi热点
 categories : 
-  - misc
+  - 技术研究
 tags : 
   - wifi
   - win8

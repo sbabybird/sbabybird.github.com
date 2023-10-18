@@ -3,9 +3,9 @@ layout: single
 title: 写歌一首
 date: 2010-03-28
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 晚饭后，出去散步，春风拂面，颇有意境，遂赋酸词一首，改日谱曲。

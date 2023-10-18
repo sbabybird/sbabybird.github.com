@@ -3,9 +3,9 @@ layout: single
 title: 准备买几本书
 date: 2009-11-25
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 刚才二舅给我打电话，聊了一会儿天。

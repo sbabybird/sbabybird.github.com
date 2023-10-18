@@ -3,11 +3,10 @@ layout : single
 date: 2014-12-29
 title : SICP 课后练习题1.8
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 math: true
 ---
 

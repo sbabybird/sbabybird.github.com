@@ -3,9 +3,9 @@ layout: single
 title: if you want me
 date: 2009-03-27
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20090327.jpg
 ---
 

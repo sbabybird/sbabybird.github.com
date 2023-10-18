@@ -3,9 +3,9 @@ layout: single
 title: 我是怎样进行知识管理的
 date: 2009-03-26
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 我有个很大的毛病，就是爱好学习，有很强的求知欲。

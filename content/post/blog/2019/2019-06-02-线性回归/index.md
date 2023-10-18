@@ -3,9 +3,9 @@ layout : single
 date: 2019-06-02
 title : 线性回归和梯度下降
 categories : 
-  - 学习
+  - 技术研究
 tags : 
-  - 机器学习
+  - AI
 ---
 
 ### 有监督学习的两种主要任务（分类和回归）

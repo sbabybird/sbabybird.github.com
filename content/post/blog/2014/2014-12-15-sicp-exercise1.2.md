@@ -4,11 +4,10 @@ date: 2014-12-15
 title : SICP 课后练习题1.2
 math: true
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 ---
 
 #### 练习1.2    请将下面表达式变换为前缀形式：

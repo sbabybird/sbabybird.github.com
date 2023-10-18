@@ -3,9 +3,9 @@ layout: single
 title: 再见2008，你好2009
 date: 2008-12-31
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20081231.png
 ---
 

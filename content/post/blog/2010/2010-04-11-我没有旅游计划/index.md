@@ -3,9 +3,9 @@ layout: single
 title: 我没有旅游计划
 date: 2010-04-11
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 刚看到有人为本年度的旅游制定了完备的计划，恩，很羡慕这个家伙。

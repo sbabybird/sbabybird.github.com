@@ -3,12 +3,12 @@ layout: single
 title: 写了个脚本整理我的照片
 date: 2010-05-01
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
-上次整理硬盘的时候把我的照片一股脑儿的放在了一个目录下，这次又有闲功夫了，写了个python脚本来处理我的照片。基本思路是使用PIL库读取照片的exif信息，取出拍摄的日期时间，根据日期建立新的文件夹，然后照片文件以日期时间格式命名。批量处理，比较简单。
+上次整理硬盘的时候把我的照片一股脑儿的放在了一个目录下，这次又有闲功夫了，写了个 python 脚本来处理我的照片。基本思路是使用 PIL 库读取照片的 exif 信息，取出拍摄的日期时间，根据日期建立新的文件夹，然后照片文件以日期时间格式命名。批量处理，比较简单。
 
 ```python
 #!/usr/bin/env python
@@ -26,10 +26,10 @@ import sys
 def get_dist_path(str, dist_dir):
     date = str.split(' ')[0].split(':')
     dirs = dist_dir + os.sep + os.sep.join(date)
-    
+
     if not os.path.exists(dirs):
         os.makedirs(dirs)
-    
+
     dirs = dirs + os.sep + ''.join(str.split(' ')[1].split(':')) + '.jpg'
     return dirs
 

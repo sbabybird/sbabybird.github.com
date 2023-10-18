@@ -2,7 +2,7 @@
 title : 使用vs2008编译mongodb
 date: 2013-11-07
 categories : 
-  - develop
+  - 技术研究
 tags : 
   - mongodb
   - vs2008

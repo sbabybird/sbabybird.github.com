@@ -3,9 +3,9 @@ layout: single
 title: 该读什么样的书
 date: 2010-03-12
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 一直后悔书读的太少，用他们文化人的观点来说，我几乎算上是文盲级别的。

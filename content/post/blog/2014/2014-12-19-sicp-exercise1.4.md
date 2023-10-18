@@ -4,11 +4,10 @@ date: 2014-12-19
 title : SICP 课后练习题1.4
 math: true
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 ---
 
 #### 练习1.4    请仔细考察上面给出的允许运算符为复合表达式的组合式的求值模型，根据对这一模型的认识描述下面过程的行为。

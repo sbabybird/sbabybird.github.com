@@ -3,9 +3,9 @@ layout: single
 title: 模仿最近比较 流行的日记格式
 date: 2010-03-10
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 今天起的很早，天气转晴了，冷的厉害。

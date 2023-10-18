@@ -3,9 +3,9 @@ layout: single
 title: 开始练习
 date: 2009-10-28
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 我是一个没有恒心的人，需要恒心的事情我没有坚持下来的。

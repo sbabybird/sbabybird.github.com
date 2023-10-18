@@ -3,9 +3,9 @@ layout: single
 title: 四个第一次
 date: 2009-01-06
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 1、今日第一次在大街上掀开井盖钻了进去。（当然是经过许可的）

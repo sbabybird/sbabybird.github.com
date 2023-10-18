@@ -3,13 +3,12 @@ layout: single
 title: 我的vim配置文件
 date: 2010-04-06
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
-
-整理了一下自己的vim配置文件，记录在此以备忘。
+整理了一下自己的 vim 配置文件，记录在此以备忘。
 
 ```vim
 " 编码设置

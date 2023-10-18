@@ -3,9 +3,9 @@ layout: single
 title: 我的指纹
 date: 2009-01-16
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 最近在做一个与指纹识别有关的项目，选了几家硬件。

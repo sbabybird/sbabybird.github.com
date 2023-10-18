@@ -3,9 +3,9 @@ layout: single
 title: 雨天
 date: 2009-10-30
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 下了点儿小雨，天气突然转冷，走在街上都有些冻耳朵了。

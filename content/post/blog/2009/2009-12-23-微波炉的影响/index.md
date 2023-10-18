@@ -3,9 +3,9 @@ layout: single
 title: 微波炉的影响
 date: 2009-12-23
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 无论厂家如何吹嘘，微波炉的电磁辐射泄漏都是挺严重的。

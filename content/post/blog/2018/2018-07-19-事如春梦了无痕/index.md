@@ -3,7 +3,7 @@ layout : single
 title: 事如春梦了无痕
 date: 2018-07-19
 categories : 
-  - 随笔
+  - 心得随笔
 tags : 
   - 心得
 ---

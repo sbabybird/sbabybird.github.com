@@ -3,9 +3,9 @@ layout: single
 title: 手机没电了
 date: 2009-09-19
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 手机没电了本打算在路上写今天的博客，结果手机一个劲儿地提醒电量低。

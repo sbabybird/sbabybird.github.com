@@ -4,11 +4,10 @@ date: 2014-12-19
 title : SICP 课后练习题1.5
 math: true
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 ---
 
 #### 练习1.5   Ben Bitdiddle发明了一种检测方法，能够确定解释器究竟采用哪种序求值，是采用应用序，还是正则序。他定义了下面两个过程

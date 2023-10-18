@@ -3,9 +3,9 @@ layout: single
 title: 祝我生日快乐！
 date: 2009-11-18
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 一大早就收到家人发来的祝福短信，原来今天是我的生日。

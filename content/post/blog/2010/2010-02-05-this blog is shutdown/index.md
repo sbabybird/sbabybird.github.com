@@ -3,9 +3,9 @@ layout: single
 title: this blog is shutdown
 date: 2010-02-05
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
-byebye另一个blog地址仍然有效http&#58;//sbabybird.blogspot.com
+byebye 另一个 blog 地址仍然有效 http&#58;//sbabybird.blogspot.com

@@ -3,9 +3,9 @@ layout: single
 title: 拔河
 date: 2009-01-12
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 公司组织全体员工在北京某郊县（靠，好神秘啊）开了三天年会。

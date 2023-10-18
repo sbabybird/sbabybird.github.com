@@ -3,9 +3,9 @@ layout: single
 title: 买了个加湿器
 date: 2010-03-09
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 北方的天气就是干燥，在房间里放上半杯水，没两天就干了。

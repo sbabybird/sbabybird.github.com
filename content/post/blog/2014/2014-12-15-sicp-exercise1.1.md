@@ -4,11 +4,10 @@ date: 2014-12-15
 title : SICP 课后练习题1.1
 math: true
 categories : 
-  - SICP
+  - 编程语言
 tags : 
   - lisp
-  - programming
-  - exercise
+  - SICP
 ---
 
 #### 练习1.1    下面是一系列表达式，对于每个表达式，解释器将输出什么结果？假定这一系列表达式是按照给出的顺序逐个求值的。

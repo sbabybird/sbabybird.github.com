@@ -3,9 +3,9 @@ layout: single
 title: 回老家休了个假
 date: 2009-10-27
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 回老家休了个假前两天回家休息了几天，和家人团聚的感觉就是好。

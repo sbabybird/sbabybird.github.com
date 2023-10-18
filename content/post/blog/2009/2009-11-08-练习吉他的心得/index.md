@@ -3,9 +3,9 @@ layout: single
 title: 练习吉他的心得
 date: 2009-11-08
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 最近几个月来，感觉思维有些迟钝，记忆力有所下降，用脑过度导致。

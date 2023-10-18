@@ -3,9 +3,9 @@ layout: single
 title: 真是个不错的天气
 date: 2010-03-14
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 虽然理论上已是春天，可是很显然今年真正的春天要比往年来得要晚一些。

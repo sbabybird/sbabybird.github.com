@@ -3,9 +3,9 @@ layout: single
 title: 体检
 date: 2009-09-22
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 体检今天是每年一度的例行体检，一切正常。

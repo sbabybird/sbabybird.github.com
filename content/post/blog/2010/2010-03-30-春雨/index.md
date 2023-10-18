@@ -3,9 +3,9 @@ layout: single
 title: 春雨
 date: 2010-03-30
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 image: 20100330512-777160.jpg
 ---
 

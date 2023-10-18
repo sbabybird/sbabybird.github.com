@@ -3,9 +3,9 @@ layout: single
 title: 美好的一天
 date: 2009-09-27
 categories:
-  - 博客日记
+  - 日志
 tags:
-  - 心情随笔
+  - life
 ---
 
 尽管我经常比闹钟醒的还早，可是起床仍然依赖闹铃。

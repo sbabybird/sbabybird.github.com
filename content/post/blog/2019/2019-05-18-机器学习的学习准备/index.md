@@ -3,9 +3,9 @@ layout : single
 date: 2019-05-18
 title : 机器学习的学习准备
 categories : 
-  - 学习
+  - 技术研究
 tags : 
-  - 机器学习
+  - AI
 ---
 
 ### 机器学习的概念
