@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wifi on Learning &amp; Writing！</title><link>https://sbabybird.github.io/tags/wifi/</link><description>Recent content in Wifi on Learning &amp; Writing！</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 13 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://sbabybird.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml"/><item><title>win8系统下使用笔记本作为wifi热点</title><link>https://sbabybird.github.io/p/win8%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%BD%9C%E4%B8%BAwifi%E7%83%AD%E7%82%B9/</link><pubDate>Thu, 13 Feb 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/win8%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%BD%9C%E4%B8%BAwifi%E7%83%AD%E7%82%B9/</guid><description>&lt;h1 id="win8系统下使用笔记本作为wifi热点">win8系统下使用笔记本作为wifi热点
+&lt;/h1>&lt;h2 id="背景">背景
+&lt;/h2>&lt;p>在没有无线路由的情况下，比如出差在宾馆，如果手里有一台可以上网的笔记本电脑，则可以给手机、平板电脑或者其他笔记本提供一个可以上网的wifi热点。&lt;/p>
+&lt;p>我平时在单位即通过此方式给我的平板电脑和手机共享网络通道，比较方便实用，近期在使用的过程中遇到一些问题，经过摸索，解决了问题，在此记录一下，方便以后查阅。&lt;/p>
+&lt;h2 id="环境需要">环境需要
+&lt;/h2>&lt;ul>
+&lt;li>一台通过有线连接上网（或者通过3G上网，就是说wifi网卡没有被占用）的笔记本电脑&lt;/li>
+&lt;li>安装有win8操作系统（win7应该也可以）&lt;/li>
+&lt;li>无线网卡芯片是intel的（否则可能不支持此技术），并使用了最新的驱动程序&lt;/li>
+&lt;/ul>
+&lt;h2 id="基本步骤">基本步骤
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>打开具有管理员权限的控制台窗口（在win8系统下，可以通过按&lt;code>windows+x&lt;/code>键，然后在弹出的菜单里选择『命令提示符（管理员）』）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>输入如下命令 &lt;code>netsh wlan set hostednetwork mode=allow ssid=&amp;quot;mywifi&amp;quot; key=&amp;quot;12345678&amp;quot;&lt;/code> &lt;em>其中ssid后面的热点名称和key后面的密码可以根据情况自行决定&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>上一个命令完成后，如果没有异常的话，则输入如下命令 &lt;code>netsh wlan start hostednetwork&lt;/code> &lt;em>这条命令如果执行成功会显示『已启动承载网络』，在下次系统重启后需要重新执行，如果嫌麻烦则可以做一个批处理文件每次双击即可&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>成功启动承载网络之后，进入『网络和共享中心』点击『更改适配器设置』，此时在该页里应该可以看到一个虚拟网卡（名称一般叫MicrosoftVirtual WiFi Miniport Adapter），右键点击那个可以上网的网络连接（如果是有线连接就是那个『本地连接』，如果是3G的则根据情况而定，总之必须是那个可以上网的连接），选择『属性』，切换到『共享』页，勾选『允许其他网络用户通过此计算机的Internet连接来连接』，在下面的下拉列表里选择那个刚虚拟出来的虚拟网卡。确定即可。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="常见问题">常见问题
+&lt;/h2>&lt;p>执行以上第二条命令启动承载网络后，有时会显示『无法启动承载网络，组或资源的状态不是执行请求操作的正确状态』，网上大部分的文章针对这个问题给出的解决办法都是更新网卡驱动，可是对于我的笔记本无效，因为我的笔记本电脑在前一段时间是好用的，后来不好用了，根据我的摸索，解决这个问题的办法是，去『设备管理器』下面的『网络适配器』里面找找，看看有没有被禁用的设备，比如『微软托管网络协议』，如果禁用了再重新启用即可正常使用此功能了。&lt;/p></description></item></channel></rss>
