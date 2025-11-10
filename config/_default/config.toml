@@ -16,4 +16,5 @@ hasCJKLanguage = true
 disqusShortname = "sbabybird"
 
 # Google Analytics
+[params.analytics]
 googleAnalytics = "G-CEXC06LBF4"
