@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SICP on Learning &amp; Writing！</title><link>https://sbabybird.github.io/tags/sicp/</link><description>Recent content in SICP on Learning &amp; Writing！</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 05 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://sbabybird.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml"/><item><title>SICP 课后练习题1.9</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.9/</link><pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.9/</guid><description>&lt;h4 id="练习-19--下面两个过程各定义了一种加起两个正整数的方法他们都基于过程inc它将参数增加1和dec它将参数减少1-请用代换模型展示这两个过程在求值add-4-5时所产生的计算过程这些计算过程是递归的或者迭代的吗">练习 1.9 下面两个过程各定义了一种加起两个正整数的方法，他们都基于过程inc(它将参数增加1)和dec(它将参数减少1) 。请用代换模型展示这两个过程在求值&lt;code>(add 4 5)&lt;/code>时所产生的计算过程。这些计算过程是递归的或者迭代的吗？
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">dec&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">dec&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解答：根据代换模型分别展开如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">inc&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">add&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>根据展开可以看出，第一个计算过程是递归的，因为明显有一个逐步扩展然后又收缩的递归计算链条。第二个计算过程是迭代的，没有扩展、收缩的过程，而是使用a和b存储了常量。&lt;/p></description></item><item><title>SICP 课后练习题1.8</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.8/</link><pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.8/</guid><description>&lt;h4 id="练习-18-求立方根的牛顿法基于如下事实如果y是x的立方根的一个近似值那么下式将给出一个更好的近似值">练习 1.8 求立方根的牛顿法基于如下事实，如果y是x的立方根的一个近似值，那么下式将给出一个更好的近似值：
+&lt;/h4>&lt;p>$$ \frac{x/y^2+2y}{3} $$&lt;/p>
+&lt;p>请利用这一公式实现一个类似平方根过程的求立方根的过程。&lt;/p>
+&lt;p>解答：基本思路与求解平方根的实现是一致的，区别再有得到更好值&lt;code>improve&lt;/code>的过程有变化，只需根据公式描述进行实现即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="nv">guess&lt;/span> &lt;span class="nv">guess&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="nv">guess&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">3&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">next&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">abs &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="nv">guess&lt;/span> &lt;span class="nv">next&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">guess&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mf">0.001&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">abs &lt;/span>&lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">cbrt-iter&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">cbrt-iter&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">cbrt&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">cbrt-iter&lt;/span> &lt;span class="mf">1.0&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>SICP 课后练习题1.7</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.7/</link><pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.7/</guid><description>&lt;h4 id="练习-17-对于确定很小的数的平方根而言在计算平方根中使用的检测good-enough是很不好的还有在现实的计算机里算术运算总是以一定的有限精度进行的这也会使我们的检测不适合非常大的数的计算请解释上述论断用例子说明对很小和很大的数这种检测都可能失败实现good-enough的另一种策略是监视猜测值在从一次迭代到下一次的变化情况当改变值相对于猜测值的比率很小时就结束请设计一个采用这种终止测试方式的平方根过程对于很大和很小的数这一方式都能工作吗">练习 1.7 对于确定很小的数的平方根而言，在计算平方根中使用的检测good-enough?是很不好的。还有，在现实的计算机里，算术运算总是以一定的有限精度进行的。这也会使我们的检测不适合非常大的数的计算。请解释上述论断，用例子说明对很小和很大的数，这种检测都可能失败。实现good-enough?的另一种策略是监视猜测值在从一次迭代到下一次的变化情况，当改变值相对于猜测值的比率很小时就结束。请设计一个采用这种终止测试方式的平方根过程。对于很大和很小的数，这一方式都能工作吗？
+&lt;/h4>&lt;p>解答：good-enough?当前采用的判断方式是，对比猜测值的平方结果与X的值之间的差距，当差距小于某个阙值时（比如0.001），就停止计算。当X很小或很大时，这种检测就会失败，比如，假设我们的阙值设置为0.001，那么当X本身小于这个阙值时，就会检测失败，得出错误结果，当X很大时，也会由于精度不足而一直达不到最佳猜测值，导致死循环。&lt;/p>
+&lt;p>因此，要解决这一问题，可以按照题目中给出的思路对good-enough?过程进行修改，不再判断猜测值平方与X的差距，而是判断两次猜测值之间的比率。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">next&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">abs &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="nv">guess&lt;/span> &lt;span class="nv">next&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">guess&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mf">0.001&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: good-enough?&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: sqrt-iter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sqrt &lt;/span>&lt;span class="mf">0.00000000001&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 3.1622776601874535e-6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sqrt &lt;/span>&lt;span class="mi">100000000000000000000000000000000000000000000&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 1.0000000000001497e22&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在新的&lt;code>good-enough?&lt;/code>中，传入的是两次猜测值，所以还要修改&lt;code>sqrt-iter&lt;/code>过程，在调用时计算两次猜测值。&lt;/p></description></item><item><title>SICP 课后练习题1.6</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.6/</link><pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.6/</guid><description>&lt;p>采用牛顿法求平方根的过程如下。开始时，我们有了被开方数的值（现在需要做的就是算出它的平方根）和一个猜测值。如果猜测值已经足够好了，有关工作也就完成了。如若不然，那么就需要改进猜测值（求出猜测值与被开方数除以猜测值的平均值），并重复这个计算过程。具体编写代码如下（在MIT scheme解释器中）。&lt;/p>
+&lt;p>定义&lt;code>sqrt-iter&lt;/code>过程，与上述描述完全对应。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">guess&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">x&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: sqrt-iter&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>定义改进猜测值的过程&lt;code>improve&lt;/code>，返回猜测值与被开方数除以猜测值的平均值。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">average&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="nv">guess&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: improve&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>定义求平均数的过程&lt;code>average&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">average&lt;/span> &lt;span class="nv">x&lt;/span> &lt;span class="nv">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="nv">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: average&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>定义判断猜测值是否足够好的过程&lt;code>good-enough?&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">abs &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">square&lt;/span> &lt;span class="nv">guess&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="mf">0.001&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: good-enough?&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>定义求绝对值和平方的过程&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">abs &lt;/span>&lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: abs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">square&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: square&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>定义最上层的过程，用于启动整个工作（使用&lt;code>1&lt;/code>这个数字作为任何数的初始猜测值）。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sqrt &lt;/span>&lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="mf">1.0&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: sqrt&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行&lt;code>sqrt&lt;/code>过程，并以&lt;code>9&lt;/code>为参数，求得平方根为&lt;code>3&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sqrt &lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 3.00009155413138&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="练习16----alyssa-phacker看不出来为什么需要将if提供为一种特殊形式她问为什么我不能直接通过cond将它定义为一个常规过程呢alyssa的朋友eva-lu-ator断言确实可以这样做并定义了if的一个新版本">练习1.6 Alyssa P.Hacker看不出来为什么需要将if提供为一种特殊形式，她问：“为什么我不能直接通过&lt;code>cond&lt;/code>将它定义为一个常规过程呢？”Alyssa的朋友Eva Lu Ator断言确实可以这样做，并定义了&lt;code>if&lt;/code>的一个新版本：
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">new-if&lt;/span> &lt;span class="nv">predicate&lt;/span> &lt;span class="nv">then-clause&lt;/span> &lt;span class="nv">else-clause&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">cond &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">predicate&lt;/span> &lt;span class="nv">then-clause&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">else &lt;/span>&lt;span class="nv">else-clause&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: new-if&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Eva给Alyssa演示她的程序：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">new-if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">new-if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>她很高兴地用自己的&lt;code>new-if&lt;/code>重写了求平方根的程序：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">new-if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">good-enough?&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">guess&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">sqrt-iter&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">improve&lt;/span> &lt;span class="nv">guess&lt;/span> &lt;span class="nv">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">x&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: sqrt-iter&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当Alyssa试着用这个过程去计算平方根时会发生什么事情呢？请给出解释。&lt;/p>
+&lt;p>解答：&lt;/p>
+&lt;p>这个练习引入了一个新的思考，刚开始时，我以为是牵涉到了过程的局部参数概念，因为在新编写的&lt;code>new-if&lt;/code>过程中，看似可以完成条件判断并返回正确的值，但是在本例中使用却存在问题，即在递归调用&lt;code>sqrt-iter&lt;/code>时，传给该过程的&lt;code>guess&lt;/code>和&lt;code>x&lt;/code>为&lt;code>new-if&lt;/code>的局部参数，被返回给了&lt;code>new-if&lt;/code>这个过程，不会向上返回到上一层&lt;code>sqrt-iter&lt;/code>里，这样就导致了改进的猜测值永远不会被使用，使得这个计算过程永远不会结束（除非第一个猜测值恰好合适），从而导致递归调用的陷入无限循环。我在&lt;code>MIT-scheme&lt;/code>解释器里的执行结果是，解释器自动退出并提示我递归调用深度超出最大值。&lt;/p>
+&lt;p>上述看起来是合理的，但是后来我考虑了其他情况，及本书在前面章节里提到了if&lt;code>(if &amp;lt;predicate&amp;gt; &amp;lt;consequent&amp;gt; &amp;lt;alternative&amp;gt;)&lt;/code>语句是条件表达式的受限形式，在执行时，先判断&lt;code>predicate&lt;/code>是否为真，然后根据结果只执行其后&lt;code>consequent/alternative&lt;/code>中的一个。如果使用本例新定义的&lt;code>new-if&lt;/code>则作为普通过程执行，传入的参数会因为解释器使用应用序求值的原因，两个表达式都会被立即求值，反应到本例中就是&lt;code>guess&lt;/code>和&lt;code>(sqrt-iter (improve guess x) x)&lt;/code>都会被立即求值，后面的那句是属于递归调用，这样也会导致改进的猜测值永远不会被使用，陷入无限层的递归调用中。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">1&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="k">=&amp;gt; &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sqrt &lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Aborting!: maximum recursion depth exceeded&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>思考：&lt;/p>
+&lt;p>最初的时候，我的针对此题的思考方式是变量的作用域问题（可能lisp不会有此问题），后来发现，也许不是这样，而是由于对传入参数立即求值导致的，后续的网上搜索结果也显示出大家的答案都倾向于后者。&lt;/p></description></item><item><title>SICP 课后练习题1.4</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.4/</link><pubDate>Fri, 19 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.4/</guid><description>&lt;h4 id="练习14----请仔细考察上面给出的允许运算符为复合表达式的组合式的求值模型根据对这一模型的认识描述下面过程的行为">练习1.4 请仔细考察上面给出的允许运算符为复合表达式的组合式的求值模型，根据对这一模型的认识描述下面过程的行为。
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">a-plus-abs-b&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">((&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">+&lt;/span> &lt;span class="nv">-&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>练习1.4，通过if判断，根据b的值决定对a b所使用的运算符是+还是-，如果b大于0，则组合式为(+ a b)，反之则为(- a b)，所以组合式结果永远返回a加上b的绝对值。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">a-plus-abs-b&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">((&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">+&lt;/span> &lt;span class="nv">-&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: a-plus-abs-b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">a-plus-abs-b&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">a-plus-abs-b&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="mi">-2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 6&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>SICP 课后练习题1.5</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.5/</link><pubDate>Fri, 19 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.5/</guid><description>&lt;h4 id="练习15---ben-bitdiddle发明了一种检测方法能够确定解释器究竟采用哪种序求值是采用应用序还是正则序他定义了下面两个过程">练习1.5 Ben Bitdiddle发明了一种检测方法，能够确定解释器究竟采用哪种序求值，是采用应用序，还是正则序。他定义了下面两个过程
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">p&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">p&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">test&lt;/span> &lt;span class="nv">x&lt;/span> &lt;span class="nv">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">x&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>而后他求值下面的表达式：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">test&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nf">p&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果某个解释器采用的是应用序求值，Ben会看到什么样的情况？如果解释器采用正则序求值，他又会看到什么情况？请对你的回答做出解释。（无论采用正则序或者应用序，假定特殊形式if的求值规则总是一样的。其中的谓词部分先行求值，根据其结果确定随后求值的子表达式部分。）&lt;/p>
+&lt;p>练习1.5 『完全展开而后规约』的求值模型为正则序求值，『先求值参数而后应用』的方式为应用序求值，因此，在应用序求值的模式下，执行&lt;code>(test 0 (p))&lt;/code>时会先求&lt;code>(p)&lt;/code>这个表达式的值，而根据定义&lt;code>(define (p) (p))&lt;/code>执行&lt;code>(p)&lt;/code>会造成递归调用，解释器陷入死循环。而在正则序求值模式下，会先展开&lt;code>test&lt;/code>过程，根据需要再决定是否执行&lt;code>(p)&lt;/code>，在本例中，由于传入的&lt;code>x&lt;/code>等于&lt;code>0&lt;/code>，所以&lt;code>(p)&lt;/code>不会被执行，因此不会陷入死循环。&lt;/p>
+&lt;p>所以，根据以上分析，如果解释器采用的是应用序求值，则解释器陷入死循环，如果是采用正则序求值，则解释器输出&lt;code>;Value: 0&lt;/code>。&lt;/p></description></item><item><title>SICP 课后练习题1.1</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.1/</link><pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.1/</guid><description>&lt;h4 id="练习11----下面是一系列表达式对于每个表达式解释器将输出什么结果假定这一系列表达式是按照给出的顺序逐个求值的">练习1.1 下面是一系列表达式，对于每个表达式，解释器将输出什么结果？假定这一系列表达式是按照给出的顺序逐个求值的。
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl">&lt;span class="mi">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="mi">5&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 12&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">9&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="mi">6&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">4&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: a&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 19&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: #f&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">and &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">cond &lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">((&lt;/span>&lt;span class="nb">= &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="mi">6&lt;/span> &lt;span class="mi">7&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">else &lt;/span>&lt;span class="mi">25&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 16&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">b&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">cond &lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">((&lt;/span>&lt;span class="nb">&amp;lt; &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="k">else &lt;/span>&lt;span class="mi">-1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: 16&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>练习1.1的内容比较简单，基本上直接就可以计算出表达式的值，所有表达式都可以在mit-scheme的交互解释器里进行验证。&lt;/p></description></item><item><title>SICP 课后练习题1.2</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.2/</link><pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.2/</guid><description>&lt;h4 id="练习12----请将下面表达式变换为前缀形式">练习1.2 请将下面表达式变换为前缀形式：
+&lt;/h4>&lt;p>$$ \frac{5+4+\Bigl(2-\Bigl(3-\left(6+\frac{4}{5}\right)\Bigr)\Bigr)}{3\left(6-2\right)\left(2-7\right)} $$&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="mi">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="mi">6&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">/ &lt;/span>&lt;span class="mi">4&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">* &lt;/span>&lt;span class="mi">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">6&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="nb">- &lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">;Value: -37/150&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>练习1.2，直接将数学表达式转换为前序表达式即可，在写的时候可以遵循一下排版规则，即同一个运算符的表达式垂直对齐。&lt;/p></description></item><item><title>SICP 课后练习题1.3</title><link>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.3/</link><pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/sicp-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%981.3/</guid><description>&lt;h4 id="练习13----请定义一个过程它以三个数为参数返回其中较大两个数之和">练习1.3 请定义一个过程，它以三个数为参数，返回其中较大两个数之和。
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scheme" data-lang="scheme">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">define &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">max-three-number&lt;/span> &lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span> &lt;span class="nv">c&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="nv">c&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">c&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="k">if &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">&amp;gt; &lt;/span>&lt;span class="nv">a&lt;/span> &lt;span class="nv">c&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="nv">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">+ &lt;/span>&lt;span class="nv">b&lt;/span> &lt;span class="nv">c&lt;/span>&lt;span class="p">))))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nf">max-three-number&lt;/span> &lt;span class="mi">42&lt;/span> &lt;span class="mi">7&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">;Value: 49&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>练习1.3，解决此练习中问题的方法比较多，本答案使用比较朴素的方法，先比较出最大的两个数字，然后将其相加，对于三个数字来说，先在前两个中选取一个大的，然后将其与后面两个中比较大的那一个相加。还有一种思路就是可以先定义出比较大小的方法，然后再调用之，或者先对数字按从小到大排序然后加最后两个，等等。&lt;/p></description></item></channel></rss>
