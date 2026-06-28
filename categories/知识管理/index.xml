@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识管理 on Learning &amp; Writing！</title><link>https://sbabybird.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link><description>Recent content in 知识管理 on Learning &amp; Writing！</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sbabybird.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>基于Markdown格式的知识管理尝试计划</title><link>https://sbabybird.github.io/p/%E5%9F%BA%E4%BA%8Emarkdown%E6%A0%BC%E5%BC%8F%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B0%9D%E8%AF%95%E8%AE%A1%E5%88%92/</link><pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/%E5%9F%BA%E4%BA%8Emarkdown%E6%A0%BC%E5%BC%8F%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B0%9D%E8%AF%95%E8%AE%A1%E5%88%92/</guid><description>&lt;h2 id="背景">背景
+&lt;/h2>&lt;ul>
+&lt;li>之前一直有收藏文章并整理自己知识体系的习惯，使用的工具是evernote（印象笔记），十多年来收集数百篇网络文章，自己整理并编写笔记若干篇，已做到目录和标签的基本分类；&lt;/li>
+&lt;li>之前也有通过每日编写一个markdown文件来记录工作日志、零星日记的习惯，有心得感悟时都直接在工作日志中随手写入，保存起来；&lt;/li>
+&lt;li>通过github pages写过一些个人博客文章，更新频率不高，主要作为个人笔记在使用；&lt;/li>
+&lt;li>当前问题如下：
+&lt;ul>
+&lt;li>evernote用户体验逐年下降，对设备限制较多，且内容存在云端、格式封闭，个人掌控感较差，数据有无法访问的风险；&lt;/li>
+&lt;li>工作日志中散落的心得感悟没有索引，基本埋没在以日期命名的文件里，不成体系；&lt;/li>
+&lt;li>收集的数百篇网络文章基本没有进行消化阅读，未形成自己理解的内容；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="目标">目标
+&lt;/h2>&lt;ul>
+&lt;li>为网络收藏和个人产出的文章建立索引，把之前的“仓库”形成“体系”；&lt;/li>
+&lt;li>从evernote中迁移出来，所有数据放在本地，并通过在线网盘进行同步；&lt;/li>
+&lt;li>以纯文本+附件资源作为载体，避免对一种编辑器或工具产生过度依赖；&lt;/li>
+&lt;/ul>
+&lt;h2 id="工具选择">工具选择
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+>Obsidian&lt;/a>，用于建立最基本的知识仓库，编辑自己的知识卡片，并充分利用它的双向链接功能将收藏的文章和自己输出的内容形成体系连接起来；&lt;/li>
+&lt;li>&lt;a class="link" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
+>vscode&lt;/a>, 用于编辑技术文章、工作日志以及基于插件进行绘图，最终输出内容到Obsidian文件库中；&lt;/li>
+&lt;li>360网盘，用于在线实时同步存储Markdown的文件夹，任何具有同步文件功能的网盘均可；&lt;/li>
+&lt;/ul>
+&lt;h2 id="具体计划">具体计划
+&lt;/h2>&lt;ul>
+&lt;li>整理文章目录：按照文章来源（网络、书籍、心得）、知识层面（技术、生活、哲学）等进行分类，形成树状目录结构；&lt;/li>
+&lt;li>整理文章标签：每篇文章虽然只属于一个目录，但是可以有多个标签，提升了检索文章的维度。目录作为知识体系的骨架分类，标签则是详细划分（如技能相关的标签就可以有：编程、绘画、音乐、写作，并还能进一步细分）；&lt;/li>
+&lt;li>参考少数派文章&lt;a class="link" href="https://sspai.com/post/62414" target="_blank" rel="noopener"
+>玩转 Obsidian 01：打造知识循环利器&lt;/a>提到的Zettelkasten笔记法逐步整理多年积累的知识形成以“知识卡”（其实就是具有互相链接关系的Markdown文件）为单位的知识；&lt;/li>
+&lt;li>[[玩转 Obsidian 01：打造知识循环利器 - 少数派]]&lt;/li>
+&lt;li>阅读整理多年收集的知识文章，按照大约每周一篇的节奏，产出自己理解后的知识卡片，形成“知识循环”；&lt;/li>
+&lt;li>如此往复若干时间，不断完善这个体系，工具可更换，载体亦可更换，唯独不变的是探索、求知的心；&lt;/li>
+&lt;/ul></description></item></channel></rss>
