@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术研究 on Learning &amp; Writing！</title><link>https://sbabybird.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/</link><description>Recent content in 技术研究 on Learning &amp; Writing！</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sbabybird.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>线性回归和梯度下降</title><link>https://sbabybird.github.io/p/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link><pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid><description>&lt;h3 id="有监督学习的两种主要任务分类和回归">有监督学习的两种主要任务（分类和回归）
+&lt;/h3>&lt;ul>
+&lt;li>有监督机器学习任务主要分为两种，一种是分类任务，一般是通过学习算法实现对未知数据的分类甄别，比如判断是男性还是女性，预测明天会不会下雨等等，预测结果是离散的分类。另一种是回归任务，用于预测一个具体的值，比如房价、年龄等等，预测结果是连续的值；&lt;/li>
+&lt;li>解决回归任务比较常见的算法就是线性回归算法；&lt;/li>
+&lt;/ul>
+&lt;h3 id="线性回归">线性回归
+&lt;/h3>&lt;ul>
+&lt;li>线性回归是最典型的用于回归任务的机器学习算法。它的基本原理是基于，任意一个为n的值，可以通过一个n-1阶的多项式进行拟合；&lt;/li>
+&lt;li>线性回归的算法的目标是根据已知标签数据，训练一个预测函数f(a, b)，使得x输入带入ax+b这样的多项式可以得出需要预测的值；&lt;/li>
+&lt;li>所以目标是找到合适的a和b（从数学语言的精确描述来说，一般用别的符号代替，为了方便记录，我使用a和b）；&lt;/li>
+&lt;li>为了找到合适的a和b，需要定义一个损失函数（也有称为代价函数的），J(a, b)，用于判断a和b是否合适，比较简单的有“方差均值”法；&lt;/li>
+&lt;li>方差均值指的是，所有样本带入预测函数f，将预测值与实际值相减，取平方，求和再求平均数（暂时不知到markdown里如何加入公式）；&lt;/li>
+&lt;li>那么带入损失函数，就是意味着，找到合适的a、b使得刚才那个方差均值小于一个阈值（接近最优）；&lt;/li>
+&lt;li>线性回归本质上，是在平面坐标系里找到一个与样本匹配的直线，这样基于这个直线，即可预测未知的值；&lt;/li>
+&lt;/ul>
+&lt;h3 id="梯度下降">梯度下降
+&lt;/h3>&lt;ul>
+&lt;li>如何找到合适的a和b，一个一个地去试是不可能的（无穷多的计算量）；&lt;/li>
+&lt;li>比较典型的算法是“梯度下降”，又是牛顿起的头；&lt;/li>
+&lt;li>比较生动的描述是，想想一个三维空间图形，X和Y平面是有a和b的值构成，Z轴是损失函数的值，值最小的部分（在图上就最低的部分，像一个山谷）就是最优解；&lt;/li>
+&lt;li>从山顶的某个点上，环顾360度，找到适合下山的一小步，一点一点儿走向山谷最低处，有点像慢慢走楼梯，所以叫梯度下降；&lt;/li>
+&lt;li>从我的体会来看，这个方法有点像牛顿那个计算平方根的迭代法（根据一个猜测值，然后通过迭代公式寻找一个更加接近正确值的值，直到误差降低到合适范围）；&lt;/li>
+&lt;li>从微积分的角度，就是找到损失函数J在最初尝试的那个点上的切线，并通过它的斜率（也就是导数值）乘以一个系数a，逐步逼近最低点（切线斜率为零）的过程；&lt;/li>
+&lt;/ul></description></item><item><title>机器学习的学习准备</title><link>https://sbabybird.github.io/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%87%86%E5%A4%87/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%87%86%E5%A4%87/</guid><description>&lt;h3 id="机器学习的概念">机器学习的概念
+&lt;/h3>&lt;p>机器学习是人工智能的一个分支，是近年来逐渐具备实用性的各种人工智能应用的基础。其本质是（我目前的个人理解）利用针对已知的数据集合抽取采样特征，然后利用某种数据模型（核心是某种算法：如kNN、SVM、朴素贝叶斯等）对数据进行计算处理，得到一组可以预测未知数据集特征的参数和手段，从而可以对数据进行预测判断的一种数据处理方法。&lt;/p>
+&lt;h3 id="机器学习相关的名词">机器学习相关的名词
+&lt;/h3>&lt;ul>
+&lt;li>神经网络：是机器学习的一种实现方式，从概念上来说，小于“机器学习”，但是由于其在图像识别、语音识别、语言翻译等领域的优异表现，以至于现在提到机器学习就认为是神经网络，实际则不然，机器学习的概念更大，更加基础，是实现神经网络应用的基础理论和方法；&lt;/li>
+&lt;li>深度学习：是神经网络的应用特例，同样是在应用层表现优异，可以理解为神经网络的一种实现；&lt;/li>
+&lt;li>大数据：机器学习的数据处理基础支撑，近年来机器学习在应用层面表现较好主要得益于大数据技术的发展，可以使得模型训练内容量级增加，极大的提高了模型准确度；&lt;/li>
+&lt;li>n维向量：来自线性代数，在机器学习中起到重要作用，在机器学习中一般用于各种特征数据的载体，在不同的算法过程中传递和计算。&lt;/li>
+&lt;/ul>
+&lt;h3 id="机器学习相关的工具">机器学习相关的工具
+&lt;/h3>&lt;ul>
+&lt;li>编程语言：目前比较流行的是Python，因为有比较丰富易用的程序包，很多科技公司也开源了较为成熟的框架，再加上Python语言本身的简单易上手，使得Python成为这个领域最流行的语言。当然C和C++、Java还是实现各种算法的根基，Python更多是提供了一种调用接口；&lt;/li>
+&lt;li>iPython：Python语言的交互控制台，可以较为方便的测试、调试Python程序，有较强的交互功能，比语言发行版自带的强大；&lt;/li>
+&lt;li>jupyter：提供Python语言的Web交互界面，通过网页即可编写代码，并及时反馈执行结果，由于是B/S架构，所以可以使得运行时跟开发环境分开。编辑界面同时支持基于Markdown语法的文档编写，使得“文学化”编程成为一种可能，非常适合用于科研人员的汇报材料或论文；&lt;/li>
+&lt;li>TensorFlow：谷歌开源的机器学习框架，快速灵活部署机器学习应用，可以应用与大规模、工业级场景；&lt;/li>
+&lt;li>keras：基于Python编写的高级神经网络API，属于对机器学习的深度封装，如果以学习机器学习原理为目标的，不建议使用，还是先手动将若干种核心算法实现一遍比较深刻；&lt;/li>
+&lt;/ul>
+&lt;h3 id="预期的学习方法">预期的学习方法
+&lt;/h3>&lt;ol>
+&lt;li>通过阅读相关的书籍，对于概念有所了解，这个过程可以是粗糙的浏览，不求详细的理解各种原理和算法；&lt;/li>
+&lt;li>尝试一些教学视频，了解实操的基本流程，对于自己读书得到的概念进行验证，修订理解，并熟悉基本工具的使用（如Python的numpy、plot等）；&lt;/li>
+&lt;li>细读书籍，按照书中的事例进行实操，并尝试推导算法的基本原理，理解后，形成自己的文字；&lt;/li>
+&lt;li>定义简单的任务，贯穿数据准备、数据清洗、特征值提取、模型建立、模型应用各个阶段，一般来说可以是手写文字识别，或者给新闻文章分类等；&lt;/li>
+&lt;li>循环和迭代这个过程，一边输入信息，一边将学到的东西结合思考，形成有效的输出（文字、视频等）；&lt;/li>
+&lt;/ol></description></item><item><title>win8系统下使用笔记本作为wifi热点</title><link>https://sbabybird.github.io/p/win8%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%BD%9C%E4%B8%BAwifi%E7%83%AD%E7%82%B9/</link><pubDate>Thu, 13 Feb 2014 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/win8%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%BD%9C%E4%B8%BAwifi%E7%83%AD%E7%82%B9/</guid><description>&lt;h1 id="win8系统下使用笔记本作为wifi热点">win8系统下使用笔记本作为wifi热点
+&lt;/h1>&lt;h2 id="背景">背景
+&lt;/h2>&lt;p>在没有无线路由的情况下，比如出差在宾馆，如果手里有一台可以上网的笔记本电脑，则可以给手机、平板电脑或者其他笔记本提供一个可以上网的wifi热点。&lt;/p>
+&lt;p>我平时在单位即通过此方式给我的平板电脑和手机共享网络通道，比较方便实用，近期在使用的过程中遇到一些问题，经过摸索，解决了问题，在此记录一下，方便以后查阅。&lt;/p>
+&lt;h2 id="环境需要">环境需要
+&lt;/h2>&lt;ul>
+&lt;li>一台通过有线连接上网（或者通过3G上网，就是说wifi网卡没有被占用）的笔记本电脑&lt;/li>
+&lt;li>安装有win8操作系统（win7应该也可以）&lt;/li>
+&lt;li>无线网卡芯片是intel的（否则可能不支持此技术），并使用了最新的驱动程序&lt;/li>
+&lt;/ul>
+&lt;h2 id="基本步骤">基本步骤
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>打开具有管理员权限的控制台窗口（在win8系统下，可以通过按&lt;code>windows+x&lt;/code>键，然后在弹出的菜单里选择『命令提示符（管理员）』）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>输入如下命令 &lt;code>netsh wlan set hostednetwork mode=allow ssid=&amp;quot;mywifi&amp;quot; key=&amp;quot;12345678&amp;quot;&lt;/code> &lt;em>其中ssid后面的热点名称和key后面的密码可以根据情况自行决定&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>上一个命令完成后，如果没有异常的话，则输入如下命令 &lt;code>netsh wlan start hostednetwork&lt;/code> &lt;em>这条命令如果执行成功会显示『已启动承载网络』，在下次系统重启后需要重新执行，如果嫌麻烦则可以做一个批处理文件每次双击即可&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>成功启动承载网络之后，进入『网络和共享中心』点击『更改适配器设置』，此时在该页里应该可以看到一个虚拟网卡（名称一般叫MicrosoftVirtual WiFi Miniport Adapter），右键点击那个可以上网的网络连接（如果是有线连接就是那个『本地连接』，如果是3G的则根据情况而定，总之必须是那个可以上网的连接），选择『属性』，切换到『共享』页，勾选『允许其他网络用户通过此计算机的Internet连接来连接』，在下面的下拉列表里选择那个刚虚拟出来的虚拟网卡。确定即可。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="常见问题">常见问题
+&lt;/h2>&lt;p>执行以上第二条命令启动承载网络后，有时会显示『无法启动承载网络，组或资源的状态不是执行请求操作的正确状态』，网上大部分的文章针对这个问题给出的解决办法都是更新网卡驱动，可是对于我的笔记本无效，因为我的笔记本电脑在前一段时间是好用的，后来不好用了，根据我的摸索，解决这个问题的办法是，去『设备管理器』下面的『网络适配器』里面找找，看看有没有被禁用的设备，比如『微软托管网络协议』，如果禁用了再重新启用即可正常使用此功能了。&lt;/p></description></item><item><title>使用vs2008编译mongodb</title><link>https://sbabybird.github.io/p/%E4%BD%BF%E7%94%A8vs2008%E7%BC%96%E8%AF%91mongodb/</link><pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate><guid>https://sbabybird.github.io/p/%E4%BD%BF%E7%94%A8vs2008%E7%BC%96%E8%AF%91mongodb/</guid><description>&lt;h2 id="背景问题">背景问题
+&lt;/h2>&lt;p>mongodb在windwos下的官方编译包是使用vs2010编译的，从官网上下载的源代码在vs2008环境下不能直接编译通过，因为mongodb提供的相关配置文件是针对vs2010的，可能是因为mongodb最新的代码使用了部分C++11的特性，而vs2008没有提供对C++11支持的原因。可是我们在一个具体的项目上需要在vs2008环境下使用mongodb，只好通过手工修改部分配置和代码的办法完成编译。&lt;/p>
+&lt;h2 id="环境准备">环境准备
+&lt;/h2>&lt;p>mongodb是使用scons进行编译控制的，所以在进行以下编译之前需要安装并配置好如下环境：&lt;/p>
+&lt;h3 id="python27">python2.7
+&lt;/h3>&lt;p>官方建议是安装python2.7版本，而且要在环境变量PATH中加入python的安装路径和python/scripts的路径，以便在命令行中执行python脚本。
+&lt;em>不过我在编译的时候使用的是python2.6版本，也没有发现问题&lt;/em>&lt;/p>
+&lt;h3 id="scons">scons
+&lt;/h3>&lt;ul>
+&lt;li>直接去网上下载最新版本进行安装即可。&lt;/li>
+&lt;/ul>
+&lt;h3 id="vs2008">vs2008
+&lt;/h3>&lt;ul>
+&lt;li>需要安装vc++的全部组件（主要是默认安装不带amd64的编译支持），如果只需要编译32位版本的话则可以忽略此条。&lt;/li>
+&lt;li>需要安装sp1补丁，否则会在编译时报错。&lt;/li>
+&lt;/ul>
+&lt;h3 id="boost库">boost库
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>最好使用boost1.4.9版本，去官网上下载对应的源码包然后自己在vs2008的命令行环境下编译&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>编译boost的命令如下（只编译了所需库）：&lt;/p>
+&lt;pre>&lt;code> bjam stage variant=debug --with-filesystem --with-thread --with-date_time --with-program_options --layout=versioned threading=multi toolset=msvc-10.0 --build-type=complete
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>如果需要编译release版本，就把&lt;code>variant&lt;/code>的选项改为&lt;code>release&lt;/code>，如果需要编译64位的版本，就在以上命令中加入&lt;code>address-model=64&lt;/code>&lt;/em>&lt;/p>
+&lt;h2 id="配置及代码修改">配置及代码修改
+&lt;/h2>&lt;h3 id="sconstruct文件修改">SConstruct文件修改
+&lt;/h3>&lt;p>SConstruct文件用于存放scons的关键配置信息，我们为了在vs2008下编译mongodb首先要做的就是修改mongodb源码下根目录的SConstruct文件。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>修改env配置，找到 evn = Environment&lt;/p>
+&lt;pre>&lt;code> env = Environment( BUILD_DIR=variantDir,
+CLIENT_ARCHIVE='${CLIENT_DIST_BASENAME}${DIST_ARCHIVE_SUFFIX}',
+CLIENT_DIST_BASENAME=get_option('client-dist-basename'),
+CLIENT_LICENSE='#distsrc/client/LICENSE.txt',
+CLIENT_SCONSTRUCT='#distsrc/client/SConstruct',
+DIST_ARCHIVE_SUFFIX='.tgz',
+EXTRAPATH=get_option(&amp;quot;extrapath&amp;quot;),
+MODULE_BANNERS=[],
+MODULETEST_ALIAS='moduletests',
+MODULETEST_LIST='#build/moduletests.txt',
+MSVS_ARCH=msarch ,
+PYTHON=utils.find_python(),
+SERVER_ARCHIVE='${SERVER_DIST_BASENAME}${DIST_ARCHIVE_SUFFIX}',
+TARGET_ARCH=msarch ,
+tools=[&amp;quot;default&amp;quot;, &amp;quot;gch&amp;quot;, &amp;quot;jsheader&amp;quot;, &amp;quot;mergelib&amp;quot;, &amp;quot;unittest&amp;quot;],
+UNITTEST_ALIAS='unittests',
+UNITTEST_LIST='#build/unittests.txt',
+PYSYSPLATFORM=os.sys.platform,
+PCRE_VERSION='8.30',
+CONFIGUREDIR = '#' + scons_data_dir + '/sconf_temp',
+CONFIGURELOG = '#' + scons_data_dir + '/config.log'
+)
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;p>在Environment里追加一条 &lt;code>MSVC_VERSION='9.0'&lt;/code>，这是因为如果机器上有其他的编译环境，比如vs2010或vs2012，scons会自动使用他们的编译器进行编译，即使你是在vs2008的命令行环境下，我最初因为此问题困扰了很久，后来才只得强制指定编译器的版本，修改完成后如下：&lt;/p>
+&lt;pre>&lt;code>env = Environment( BUILD_DIR=variantDir,
+CLIENT_ARCHIVE='${CLIENT_DIST_BASENAME}${DIST_ARCHIVE_SUFFIX}',
+CLIENT_DIST_BASENAME=get_option('client-dist-basename'),
+CLIENT_LICENSE='#distsrc/client/LICENSE.txt',
+CLIENT_SCONSTRUCT='#distsrc/client/SConstruct',
+DIST_ARCHIVE_SUFFIX='.tgz',
+EXTRAPATH=get_option(&amp;quot;extrapath&amp;quot;),
+MODULE_BANNERS=[],
+MODULETEST_ALIAS='moduletests',
+MODULETEST_LIST='#build/moduletests.txt',
+MSVS_ARCH=msarch ,
+PYTHON=utils.find_python(),
+SERVER_ARCHIVE='${SERVER_DIST_BASENAME}${DIST_ARCHIVE_SUFFIX}',
+TARGET_ARCH=msarch ,
+tools=[&amp;quot;default&amp;quot;, &amp;quot;gch&amp;quot;, &amp;quot;jsheader&amp;quot;, &amp;quot;mergelib&amp;quot;, &amp;quot;unittest&amp;quot;],
+UNITTEST_ALIAS='unittests',
+UNITTEST_LIST='#build/unittests.txt',
+PYSYSPLATFORM=os.sys.platform,
+PCRE_VERSION='8.30',
+CONFIGUREDIR = '#' + scons_data_dir + '/sconf_temp',
+CONFIGURELOG = '#' + scons_data_dir + '/config.log',
+MSVC_VERSION = '9.0'
+)
+&lt;/code>&lt;/pre>
+&lt;ul>
+&lt;li>
+&lt;p>给编译器搜索路径增加你自己本地的boost库路径
+因为在编译时需要用到boost库，所以需要把你在本地的boost所在目录加入scons的环境，否则会报找不到boost头文件或链接库的错误，打开Sconstruct文件直接在最后加入如下代码&lt;/p>
+&lt;p>env.Append(CPPPATH=[&amp;ldquo;d:/thirdlib/boost_1_49_0&amp;rdquo;, &amp;ldquo;d:/thirdlib/boost_1_49_0/boost/tr1&amp;rdquo;], LIBPATH=[&amp;ldquo;d:/thridlib/boost_1_49_0/stage/lib&amp;rdquo;])&lt;/p>
+&lt;pre>&lt;code> *你在编译时需要将路径替换成你自己的*
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="准备stdinth">准备stdint.h
+&lt;/h3>&lt;ul>
+&lt;li>去这个地址&lt;a class="link" href="https://msinttypes.googlecode.com/files/msinttypes-r26.zip" target="_blank" rel="noopener"
+>https://msinttypes.googlecode.com/files/msinttypes-r26.zip&lt;/a>下载msinttypes，将压缩包里的stdint.h解压并复制到 &lt;code>C:\Program Files\Microsoft Visual Studio 9.0\VC\include&lt;/code> 目录&lt;/li>
+&lt;li>修改mongodb源码目录下platform下的cstdint.h，将&lt;code>#include&amp;lt;cstdint&amp;gt;&lt;/code>修改为&lt;code>#include&amp;lt;stdint.h&amp;gt;&lt;/code>，将&lt;code>#define _MONGO_STDINT_NAMESPACE std&lt;/code>这一行里的std注释掉，变成&lt;code>#define _MONGO_STDINT_NAMESPACE /*std*/ &lt;/code>&lt;/li>
+&lt;li>修改mongodb源码目录下util下的time_support.h，在文件开头加入&lt;code>#include&amp;lt;stdint.h&amp;gt;&lt;/code>，否则在编译这个文件时会无法识别int64_t类型&lt;/li>
+&lt;/ul>
+&lt;h3 id="修改windows_basich">修改windows_basic.h
+&lt;/h3>&lt;ul>
+&lt;li>修改mongodb源码目录下platform下的windows_basic.h，&lt;/li>
+&lt;li>在&lt;code> #if !defined(NTDDI_WINXPSP3) || (NTDDI_VERSION &amp;lt; NTDDI_WINXPSP3)&lt;/code> 之前加入 &lt;code>#define NTDDI_WINXPSP3 0x05010300&lt;/code> 在&lt;code>#if !defined(NTDDI_WS03SP2) || (NTDDI_VERSION &amp;lt; NTDDI_WS03SP2)&lt;/code>之前加入&lt;code>#define NTDDI_WS03SP2 0x05020200&lt;/code> 否则会报 &amp;ldquo;32 bit mongo does not support Windows versions older than XP Service Pack 3&amp;rdquo; 和&amp;quot;64 bit mongo does not support Windows versions older than Windows Server 2003 SP 2&amp;quot; 错误&lt;/li>
+&lt;/ul>
+&lt;h3 id="修改listencpp和sockcpp">修改listen.cpp和sock.cpp
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>修改util下net下listen.cpp，在#include段之后加入如下代码&lt;/p>
+&lt;pre>&lt;code> #ifdef _WIN32
+#define EADDRINUSE WSAEADDRINUSE
+#define ECONNABORTED WSAECONNABORTED
+#define EBADF 9
+#define ENFILE 23
+#define EMFILE 24
+#endif
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;li>
+&lt;p>修改util下net下sock.cpp，在#include段之后加入如下代码&lt;/p>
+&lt;pre>&lt;code> #ifdef _WIN32
+#define EAGAIN 11
+#endif
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="开始编译">开始编译
+&lt;/h2>&lt;p>环境准备好之后，编译就比较简单了，打开vs2008命令行窗口，执行如下代码即可完成编译
+&lt;code>scons --dd --32 mongoclient.lib&lt;/code>&lt;/p>
+&lt;p>如果是编译release版本，就把&amp;ndash;dd换成&amp;ndash;release，如果是编译64位版本，就把&amp;ndash;32换成&amp;ndash;64&lt;/p></description></item></channel></rss>
